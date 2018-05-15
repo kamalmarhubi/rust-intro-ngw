@@ -70,7 +70,7 @@ functions's signature. So change it to return a `Result`, which is Rust's way
 of representing tihngs that might fail. So let's change `fn main()` to
 
 ```rust
-fn main() -> Result<(), Box<std::error::Error>
+fn main() -> Result<(), Box<std::error::Error>>
 ```
 
 We'll get a chance to look at `Result` and `Error` in more detail later. For now let's just move on to...
