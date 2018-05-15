@@ -76,6 +76,8 @@ fn main() -> Result<(), Box<std::error::Error>> {
 }
 ```
 
+The `Ok(())` is how we say that everything completed fine.
+
 We'll get a chance to look at `Result` and `Error` in more detail later. For now let's just move on to...
 
 ## Opening a TCP connection with sockets
