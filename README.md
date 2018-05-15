@@ -136,9 +136,17 @@ the socket and an address to connect to:
 
 ```rust
 let ip_addr = IpAddr::new_v4(1, 1, 1, 1);
-let addr = SockAddr::new_inet(InetAddr::new(ip_addr, port));
-connect(s, &sockaddr)?;
+let sockaddr = SockAddr::new_inet(InetAddr::new(ip_addr, port));
+connect(sock, &sockaddr)?;
 ```
+
+You'll need to add a few more imports for `IpAddr`, `SockAddr`, and `connect`. At this point it might be worth changing the `use` line to
+
+```rust
+use nix::sys::socket::*;
+```
+
+to import everything from the socket module.
 
 Building up the address is kind of tedious. That's what we get for bypassing the standard library!
 
