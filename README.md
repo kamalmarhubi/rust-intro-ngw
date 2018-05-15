@@ -76,7 +76,9 @@ fn main() -> Result<(), Box<std::error::Error>> {
 }
 ```
 
-The `Ok(())` is how we say that everything completed fine.
+The `Ok(())` is how we say that everything completed fine, and there's no useful result.
+
+<small>(If you've used a typed funcitonal language, `()` is sometimes called "unit".)</small>
 
 We'll get a chance to look at `Result` and `Error` in more detail later. For now let's just move on to...
 
